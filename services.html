@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - SkyNetics</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+    }
+
+    .srv {
+      position: relative;
+      background-image: url('tech.png');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      overflow-x: hidden;
+    }
+
+    .srv::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .srv-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .service-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px 20px;
+      border-radius: 15px;
+      transition: transform 0.3s ease, background 0.3s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .service-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .service-card p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #f0f0f0;
+    }
+
+    a.back-btn {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      background: #ff6600;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    a.back-btn:hover {
+      background: #e65c00;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .service-card {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="srv">
+    <div class="srv-content">
+      <h1>Our Services</h1>
+      <div class="services-grid">
+        <div class="service-card">
+          <h2>AI Consulting</h2>
+          <p>We provide expert guidance to help businesses adopt AI efficiently, optimize processes, and make data-driven decisions.</p>
+        </div>
+        <div class="service-card">
+          <h2>Machine Learning Solutions</h2>
+          <p>From predictive models to intelligent automation, our ML solutions are tailored to solve complex business challenges.</p>
+        </div>
+        <div class="service-card">
+          <h2>Automation Systems</h2>
+          <p>We design smart automation systems that streamline operations, save time, and increase productivity across industries.</p>
+        </div>
+      </div>
+      <a href="index.html" class="back-btn">⬅ Back to Home</a>
+    </div>
+  </section>
+</body>
+</html>
+
+

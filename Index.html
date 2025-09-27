@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyNetics AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset and fonts */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #f8f9fc; color: #222; line-height: 1.6; }
+
+    /* Navbar */
+    nav {
+      width: 100%;
+      padding: 15px 40px;
+      background: rgba(0,0,0,0.7);
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      z-index: 100;
+      backdrop-filter: blur(5px);
+    }
+    nav h2 { font-size: 28px; font-weight: 700; letter-spacing: 2px; }
+    nav ul { list-style: none; display: flex; gap: 25px; }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+    nav ul li a:hover { color: lightskyblue; }
+
+    /* Hero Section */
+    .hero {
+      background: url("sky.png") center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 40, 0.6);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+      animation: fadeInUp 1s ease forwards;
+    }
+    .hero h1 { font-size: 70px; margin-bottom: 15px; text-shadow: 2px 2px 20px rgba(0,0,0,0.7); }
+    .hero p { font-size: 24px; margin-bottom: 30px; text-shadow: 1px 1px 10px rgba(0,0,0,0.5); }
+
+    /* Hero Buttons */
+    .btn-group { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 12px 25px; border: none; border-radius: 10px;
+      font-size: 18px; font-weight: 700; cursor: pointer; transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .btn-primary {
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      color: white;
+    }
+    .btn-primary:hover { transform: scale(1.05); box-shadow: 0 8px 25px rgba(0,114,255,0.5); }
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+    .btn-secondary:hover { background: white; color: black; transform: scale(1.05); }
+
+    /* Info Section */
+    .section {
+      padding: 100px 40px;
+      text-align: center;
+      animation: fadeInUp 1s ease forwards;
+    }
+    .section h2 { font-size: 42px; margin-bottom: 20px; color: #333; }
+    .section p { font-size: 20px; max-width: 700px; margin: 0 auto; color: #555; }
+
+    /* Robot Section */
+    .robot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 40px;
+      background: white;
+      border-radius: 20px;
+      margin: 40px auto;
+      max-width: 1000px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .robot:hover { transform: translateY(-10px) scale(1.02); }
+    .robot img { width: 300px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+    .robot-text { max-width: 500px; text-align: left; }
+    .robot-text h3 { font-size: 30px; margin-bottom: 15px; color: #0072ff; }
+    .robot-text p { font-size: 18px; color: #444; }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #bbb;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    footer p { font-size: 14px; }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 50px; }
+      .hero p { font-size: 20px; }
+      .robot { flex-direction: column; text-align: center; gap: 20px; }
+      .robot-text { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h2>SkyNetics</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>SkyNetics AI</h1>
+      <p>Empowering the Future with Cutting-Edge Artificial Intelligence</p>
+      <div class="btn-group">
+        <button class="btn btn-primary" onclick="window.location.href='Contact.html'">Get Started</button>
+        <button class="btn btn-secondary" onclick="window.location.href= 'About.html'">Learn More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Section -->
+  <section class="section">
+    <h2>Revolutionizing AI Technology</h2>
+    <p>
+      SkyNetics AI delivers cutting-edge artificial intelligence solutions that transform 
+      businesses and drive innovation across industries.
+    </p>
+  </section>
+
+  <!-- Robot Section -->
+  <section class="robot">
+    <img src="robot.png" alt="AI Robot">
+    <div class="robot-text">
+      <h3>Advanced Machine Learning</h3>
+      <p>
+        Our AI models continuously learn, adapt, and evolve to provide smarter,
+        more efficient solutions tailored to your needs.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SkyNetics AI | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
+
+
